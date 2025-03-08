@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+nav {
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background 0.3s, border-radius 0.3s;
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+section {
+    display: none;
+    padding: 80px 50px;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+section:target {
+    display: block;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+#contact {
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+#contact button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#contact .links a img:hover {
+    transform: scale(1.25);
+}
+#contact button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.slider {
+    width: 300px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    animation: slide 8s infinite;
+}
+
+.slides img {
+    width: 300px;
+    margin: 10px;
+    transition: transform 1s ease-in-out;
+    border-radius: 10px;
+}
+
+.slides img:hover {
+    transform: scale(1.5);
+}
+
+@keyframes slide {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-300px); }
+    50% { transform: translateX(-600px); }
+    75% { transform: translateX(-900px); }
+}
+.success {
+    display: none;
+    color: green;
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#success.success:target {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.links a img {
+    width: 40px;
+    height: auto;
+}
+@keyframes hideSection {
+    0% { opacity: 1; max-height: 500px; }
+    100% { opacity: 0; max-height: 0; visibility: hidden; }
+}
+
+@keyframes showSection {
+    0% { opacity: 0; max-height: 0; visibility: hidden; }
+    100% { opacity: 1; max-height: 500px; visibility: visible; }
+}
+
+#birthday, #new-section {
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#birthday:target {
+    animation: hideSection 1s ease-in-out 5s forwards;
+}
+
+#birthday:target ~ #new-section {
+    display: block;
+    animation: showSection 1s ease-in-out 6s forwards;
+}
+
+#new-section {
+    opacity: 0;
+    max-height: 0;
+    visibility: hidden;
+}
+
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .slides img {
+        width: 100%;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+}

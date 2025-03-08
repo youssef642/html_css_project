@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#birthday">My Birthday</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#countries">My Favorite Countries</a></li>
+                <li><a href="#cv">My CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to My Home Page</h1>
+        <img src="./media/personal.jpg" alt="Personal Image of Youssef Khaled">
+        <p>Hello, my name is <strong>Youssef Khaled</strong>.<br>
+            I'm <strong>24 years old</strong>.<br>
+            I'm from <strong>Beni Suef</strong>.<br>
+            I graduated from the <strong>Faculty of Computers and Artificial Intelligence</strong>.
+        </p>
+    </section>
+
+    <section id="hobbies">
+        <h2>Here are some of my hobbies</h2>
+        <div>
+            <p><strong>First hobby:</strong> Coding</p>
+            <img src="./media/coding.jpg" alt="Coding Hobby">
+            <p><strong>Second hobby:</strong> Football</p>
+            <img src="./media/football.jpg" alt="Football Hobby">
+        </div>
+    </section>
+
+    <section id="birthday">
+        <img src="./media/birthday.jpg" alt="Birthday Celebration">
+        <p>It's my birthday!</p>
+    </section>
+
+    <section id="new-section">
+        <h1>Surprise! </h1>
+        <p>happy birth day!</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <form action="#success">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    
+        <div class="links">
+            <h2>Social Links</h2>
+            <a href="https://www.facebook.com/youssefkhaled120" aria-label="Facebook"><img src="./media/facebook.jpg" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/youssef-khaled-8b5757352/" aria-label="LinkedIn"><img src="./media/linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:youssefaboseif72@gmail.com" aria-label="Email"><img src="./media/mail.png" alt="Email"></a>
+        </div>
+    </section>
+    <section id="success"> 
+               <p>Your message has been sent successfully</p>
+    </section>
+
+    <section id="countries">
+        <h1>Countries I Wish to Visit</h1>
+        <div class="slider">
+            <div class="slides">
+                <img src="./media/saudi.jpg" alt="Saudi Arabia">
+                <img src="./media/spain.png" alt="Spain">
+                <img src="./media/uae.png" alt="UAE">
+                <img src="./media/france.png" alt="France">
+            </div>
+        </div>
+    </section>
+
+    <section id="cv">
+        <h2>My CV</h2>
+        <p><strong>Name:</strong> Youssef Khaled</p>
+        <p><strong>Skills:</strong> HTML, CSS, JavaScript, PHP</p>
+    </section>
+
+</body>
+</html>
